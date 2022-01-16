@@ -1,0 +1,21 @@
+{
+  "name": "Bot WhatsApp",
+  "description": "Very simple bot whatsapp with the javascript.",
+  "repository": "https://github.com/Denny123141/v12",
+  "logo": "https://github.com/Denny123141/Haruka/blob/master/settings/thumbnail_2.jpg",
+  "keywords": [
+    "node",
+    "WhatsApp",
+    "bot"
+  ],
+  "image": "heroku/nodejs",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },{
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },{
+        "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
+}
