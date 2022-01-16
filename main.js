@@ -13,7 +13,7 @@ nocache('./index.js', module => console.log(`${module} Telah Di Update✓`))
 const starts = async (Lexxy = new WAConnection()) => {
 Lexxy.logger.level = 'warn'
 Lexxy.version = [2, 2143, 8]
-Lexxy.browserDescription = ["Lexxy Official", "safari", "windows 10"];
+Lexxy.browserDescription = ["Viscount", "Firefox", "Windows 11"];
 console.log(banner.string)
 Lexxy.on('qr', () => {
 console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan bang'))})
@@ -27,7 +27,7 @@ fs.writeFileSync('./session.json', JSON.stringify(Lexxy.base64EncodedAuthInfo(),
 Lexxy.on('chat-update', async (message) => {
 require('./index.js')(Lexxy, message)})}
 function nocache(module, cb = () => { }) {
-console.log('[ ! ]', `'${module}'`, 'DI Pantau Oleh Lexxy Official')
+console.log('[ ! ]', `'${module}'`, 'DI Pantau Oleh Viscount')
 fs.watchFile(require.resolve(module), async () => {
 await uncache(require.resolve(module))
 cb(module)})}
