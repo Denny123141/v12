@@ -53,7 +53,7 @@ isSelf = false
 isPublic = true
 
 //JANGAN DI GANTI
-fakeyoi = ["Lexxy Official"]
+fakeyoi = ["Viscount Bot"]
 api = ["https://myselfff.herokuapp.com/docs"]
 simbol = ["•"]
 const botName = setting.BotName
@@ -61,7 +61,7 @@ const owner = setting.OwnerNumber
 const ownerName = setting.OwnerName
 
 //APIKEY
-zeksApi = [""]
+zeksApi = ["ikkaNSarden"]
 
 //=================( PEMBATASAN )=================//
 
@@ -156,12 +156,12 @@ const cekcek = randomNomor(100)
 
 mess = {
 premier: `Fitur ini Khusus User Premium!!\nKalo Mau Jadi User Premium\nSilahkan Chat Owner Ku\nWa.me/${owner}`,
-wait: 'Wait a minute',
-wrongFormat: 'Format salah, coba liat lagi di menu',
+wait: 'Sabar ya',
+wrongFormat: 'Format salah',
 success: 'Success',
 error: {
-stick: 'Cannot access videos!',
-lv: 'Invalid link!',
+stick: 'Gak bisa akses video',
+lv: 'Salah link',
 api: 'Error'
 },
 only: {
@@ -199,9 +199,9 @@ const mentions = (teks, memberr, id) => {
 if (budy.includes("https://chat.whatsapp.com/")) {
 if (!isGroup) return
 if (!isAntilink) return
-if (isGroupAdmins) return reply("admin bebas aowkwkww")
+if (isGroupAdmins) return reply("Jing admin, bebas lu")
 var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-reply(` *「 GROUP LINK DETECTOR 」*\nKamu mengirimkan link grup chat, maaf kamu di kick dari grup :(`)
+reply(` *「 GROUP LINK DETECTOR 」*\nKamu mengirimkan link grup chat, maaf kamu di kick dari grup `)
 setTimeout(() => {
 Lexxy.groupRemove(from, [kic]).catch((e) => { reply(`BOT HARUS JADI ADMIN`) })
 }, 0)
@@ -451,14 +451,10 @@ ${simbol} ${prefix}sound25`)
 break
 case 'othersmenu':
 reply2(`❏ 𝙊𝙩𝙝𝙚𝙧𝙨
-${simbol} ${prefix}store
 ${simbol} ${prefix}infobot
 ${simbol} ${prefix}cekprem
-${simbol} ${prefix}scbot
 ${simbol} ${prefix}owner
 ${simbol} ${prefix}donasi
-${simbol} ${prefix}request <fitur>
-${simbol} ${prefix}report <fitur>`)
 break
 case 'ownermenu':
 reply2(`❏ 𝙊𝙬𝙣𝙚𝙧
@@ -697,27 +693,27 @@ break
 case 'gfx1':
 case 'gfx2':
 case 'gfx5':
-if (args.length ==0) return reply(`Text Nya Mana? Contohnya\n${prefix+command} Lexxy`)
+if (args.length ==0) return reply(`Text Nya Mana? Contohnya\n${prefix+command} Viscount`)
 sticWait(from)
 ini_txt = args.join(" ")
 gfx = await getBuffer(`https://hardianto.xyz/api/bot/${command}?apikey=hardianto&nama=${ini_txt}`)
-Lexxy.sendMessage(from, gfx, image, { quoted: mek, caption: '*Logo By Lexxy Officia*'})
+Lexxy.sendMessage(from, gfx, image, { quoted: mek, caption: '*Logo By Viscount*'})
 break
 case 'gfx3':
 case 'gfx4':
-if (args.length ==0) return reply(`Text Nya Mana? Contohnya\n${prefix+command} Lexxy OFC`)
+if (args.length ==0) return reply(`Text Nya Mana? Contohnya\n${prefix+command} Viscount`)
 sticWait(from)
 ini_txt1 = args[0]
 ini_txt1 = args[1]
 gfx = await getBuffer(`https://hardianto.xyz/api/bot/${command}?apikey=hardianto&text1=${ini_txt1}&text2=${ini_txt2}`)
-Lexxy.sendMessage(from, gfx, image, { quoted: mek, caption: '*Logo By Lexxy Officia*'})
+Lexxy.sendMessage(from, gfx, image, { quoted: mek, caption: '*Logo By Viscount*'})
 break
 case 'gfx6':
-if (args.length ==0) return reply(`Text Nya Mana? Contohnya\n${prefix+command} Lexxy`)
+if (args.length ==0) return reply(`Text Nya Mana? Contohnya\n${prefix+command} Viscount`)
 sticWait(from)
 ini_txt = args.join(" ")
 gfx = await getBuffer(`https://hardianto.xyz/api/bot/gura?apikey=hardianto&nama=${ini_txt}`)
-Lexxy.sendMessage(from, gfx, image, { quoted: mek, caption: '*Logo By Lexxy Officia*'})
+Lexxy.sendMessage(from, gfx, image, { quoted: mek, caption: '*Logo By Viscount*'})
 break
 case 'menu':
 const { wa_version, mcc, mnc, os_version, device_manufacturer, device_model } = Lexxy.user.phone
@@ -731,7 +727,7 @@ ros = await Lexxy.prepareMessageFromContent(from,{
 □» 𝐋𝐢𝐛 : *Baileys*
 □» 𝐓𝐲𝐩𝐞 : *NodeJS*
 □» 𝐌𝐨𝐝𝐞 : *${isPublic? "Public":"Self"}*
-□» 𝐑𝐚𝐦 : *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*
+□» 𝐑𝐚𝐦 : *${(process.memoryUsage().heapUsed / 1024 / 2024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 64024)}MB*
 □» 𝐕𝐞𝐫𝐬𝐢 𝐎𝐒 : *${os_version}*
 □» 𝐕𝐞𝐫𝐬𝐢 𝐇𝐏 : *${device_model}*
 □» 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩 : *${wa_version}*
@@ -824,10 +820,6 @@ ros = await Lexxy.prepareMessageFromContent(from,{
 {
  "title": "Owner Bot 👤",
 "rowId": `${prefix}owner`
-},
-{
-"title": "Script Bot 💌",
-"rowId": `${prefix}scbot`
 },
 {
 "title": "Info Bot ⚙️",
@@ -946,7 +938,7 @@ case 'store':
 res = await Lexxy.prepareMessageFromContent(from,{
 "listMessage": {
 "title": '「 STORE MENU 」',
-"description": `*Created By Lexxy*`,
+"description": `*Created By Viscount*`,
 "buttonText": "𝙋𝙄𝙇𝙄𝙃 𝘿𝙄𝙎𝙄𝙉𝙄",
 "listType": "SINGLE_SELECT",
 "sections": [
@@ -1040,7 +1032,7 @@ case 'serti2':
 case 'serti3':
 if (!isPremier)return reply(mess.premier)
 if (isBanned)return sticBanned(from)
-if (args.length ==0) return reply(`Text Nya Mana kak? Contoh\n${prefix+command} Lexxy`)
+if (args.length ==0) return reply(`Text Nya Mana kak? Contoh\n${prefix+command} Viscount`)
 txtt = args.join (" ")
 sticWait(from)
 buff = await getBuffer(`https://sertiojanganzapi.nasihosting.com/serti/${command}/img.php?nama=${txtt}`)
@@ -1060,7 +1052,7 @@ break
 case 'ttp':
 if (!isPremier)return reply(mess.premier)
 if (isBanned)return sticBanned(from)
-if (args.length ==0) return reply(`Text Nya Mana kak? Contoh\n${prefix+command} Lexxy`)
+if (args.length ==0) return reply(`Text Nya Mana kak? Contoh\n${prefix+command} Viscount`)
 tp = args.join (" ")
 sticWait(from)
 ttp = await getBuffer(`https://hardianto.xyz/api/ttpcustom?text=${tp}&color=black&apikey=hardianto`)
@@ -1082,7 +1074,7 @@ case 'foliokiri':
 case 'foliokanan':
 if (!isPremier)return reply(mess.premier)
 if (isBanned)return sticBanned(from)
-if (args.length ==0) return reply(`Text Nya Mana kak? Contoh\n${prefix+command} Lexxy`)
+if (args.length ==0) return reply(`Text Nya Mana kak? Contoh\n${prefix+command} Viscount`)
 mgr = args.join (" ")
 sticWait(from)
 buff = await getBuffer(`https://hardianto.xyz/api/${command}?text=${mgr}&apikey=hardianto`)
@@ -1101,33 +1093,33 @@ break
 case 'gura':
 if (!isPremier)return reply(mess.premier)
 if (isBanned)return sticBanned(from)
-if (args.length ==0)return reply(`Textnya mana kak? Contoh\n${prefix + command} Lexxy`)
+if (args.length ==0)return reply(`Textnya mana kak? Contoh\n${prefix + command} Viscount`)
 bo = args.join(" ")
 sticWait(from)
 bf = await getBuffer(`https://ziy.herokuapp.com/api/Gura?nama=${bo}&apikey=xZiyy`)
-Lexxy.sendMessage(from, bf, image, { quoted: flexx, caption: 'Logo By Lexxy Official' })
+Lexxy.sendMessage(from, bf, image, { quoted: flexx, caption: 'Logo By Viscount' })
 break
 case 'kaneki':
 case 'rem':
 case 'lolimaker':
 if (!isPremier)return reply(mess.premier)
 if (isBanned)return sticBanned(from)
-if (args.length ==0)return reply(`Textnya mana kak? Contoh\n${prefix + command} Lexxy`)
+if (args.length ==0)return reply(`Textnya mana kak? Contoh\n${prefix + command} Viscount`)
 bo = args.join(" ")
 sticWait(from)
 bf = await getBuffer(`https://ziy.herokuapp.com/api/${command}?nama=${bo}&apikey=xZiyy`)
-Lexxy.sendMessage(from, bf, image, { quoted: flexx, caption: 'Logo By Lexxy Official' })
+Lexxy.sendMessage(from, bf, image, { quoted: flexx, caption: 'Logo By Viscount' })
 break
 case 'girlneko':
 case 'sadboy':
 if (!isPremier)return reply(mess.premier)
 if (isBanned)return sticBanned(from)
-if (args.length ==0)return reply(`Textnya mana kak? Contoh\n${prefix + command} Lexxy OFC`)
+if (args.length ==0)return reply(`Textnya mana kak? Contoh\n${prefix + command} Viscount`)
 txt1 = args[0]
 txt2 = args[1]
 sticWait(from)
 bf = await getBuffer(`https://ziy.herokuapp.com/api/${command}?text1=${txt1}&text2=${txt2}&apikey=xZiyy`)
-Lexxy.sendMessage(from, bf, image, { quoted: flexx, caption: 'Logo By Lexxy Official' })
+Lexxy.sendMessage(from, bf, image, { quoted: flexx, caption: 'Logo By Viscount9' })
 break
 case 'menew':
 reply2('Beban Baru ini Kita Bully Bareng Yok')
@@ -1443,7 +1435,7 @@ but = [
 sendButLoc(from, dr1, dr2, td, but)
 break
 case 'attp':
-if (args.length ==0)return (`Text nya mana cuy Contoh\n${prefix + command} Lexxy`)
+if (args.length ==0)return (`Text nya mana cuy Contoh\n${prefix + command} Viscount`)
 attp = args.join(" ")
 sticLoad(from)
 atp = await getBuffer(`https://hardianto.xyz/api/maker/attp?text=${attp}&apikey=hardianto`)
@@ -1531,7 +1523,7 @@ exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 fs.unlinkSync(media)
 if (err) return reply('Yah gagal, coba ulangi ^_^')
 buffer = fs.readFileSync(ran)
-fakethumb(buffer,'By Lexxy Official')
+fakethumb(buffer,'By Viscount')
 fs.unlinkSync(ran)
 })
 break
@@ -1603,7 +1595,7 @@ await Lexxy.sendMessage(from, di, image, { quoted: mek })
 break
 case 'setreply':
 if (!isOwner) return sticOwner(from)
-if (args.length ==0)return (`Text Nya Mana? Contoh\n${prefix+command} Lexxy Official`)
+if (args.length ==0)return (`Text Nya Mana? Contoh\n${prefix+command} Viscount`)
 gg = args.join(" ")
 fakeyoi = gg
 reply(`Succes Mengganti Reply Fake : ${q}`)
@@ -2011,7 +2003,7 @@ case 'info':
 dp =`${dev}`
 reply(dp)
 break
-case 'scbot':
+case 'scbt':
 sc =`${scb}`
 reply(sc)
 break
